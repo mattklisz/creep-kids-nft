@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h2 {
+  text-transform: uppercase;
+}
+
+a {
+  color: red;
+}
+
+a:hover {
+  color: white;
+}
