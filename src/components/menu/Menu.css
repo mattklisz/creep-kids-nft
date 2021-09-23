@@ -3,3 +3,25 @@
   width: 100%;
   justify-content: space-evenly;
 }
+
+.menu-container-mobile {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.menu-label {
+  border: 1px solid red;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.menu-label-open {
+  border: 1px solid white;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.menu-link {
+  display: block;
+  margin-top: 1rem;
+}

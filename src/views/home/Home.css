@@ -1,4 +1,10 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(1rem, 30rem) auto minmax(1rem, 30rem);
+}
+
 .home-container {
+  grid-column: 2;
   color: white;
 }
 
@@ -7,7 +13,9 @@
 }
 
 .teaser {
-  margin-top: 4rem;
+  margin: 4rem auto 0 auto;
+  height: 20rem;
+  width: 20rem;
 }
 
 .section {
@@ -16,4 +24,8 @@
 
 .copy {
   margin: 2rem auto;
+}
+
+.copy-inner {
+  margin: 1rem auto;
 }
