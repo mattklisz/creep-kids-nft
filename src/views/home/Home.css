@@ -18,6 +18,20 @@
   width: 18rem;
 }
 
+.example-creep {
+  color: red;
+}
+
+.example-creep-name {
+  font-size: 1.5rem;
+}
+
+.example-creep-image {
+  height: 16rem;
+  width: 16rem;
+  margin: 1rem auto;
+}
+
 .section {
   margin-top: 3rem;
 }
@@ -28,4 +42,12 @@
 
 .copy-inner {
   margin: 1rem auto;
+}
+
+.copy-label {
+  color: white;
+}
+
+.copy-no-margin {
+  margin: 0 auto;
 }

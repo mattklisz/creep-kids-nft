@@ -34,6 +34,20 @@ export const Home = () => {
         <div className="copy">
           {'When minted, each Creep Kid is assigned a unique set of RPG attributes and their names are created using GPT-3.'}
         </div>
+        <div className="example-creep">
+          <div className="example-creep-name">
+            {'SCORNED DEMON'}
+          </div>
+          <div className="example-creep-image">
+            <img src="./assets/images/example-creep.gif" alt="" />
+          </div>
+          <div>{'SOUL INDEX #13'}</div>
+          <div className="copy-inner copy-label">ATTRIBUTES</div>
+          <div className="copy-no-margin">STRENGTH: 240</div>
+          <div className="copy-no-margin">SPEED: 666</div>
+          <div className="copy-no-margin">INTELLIGENCE: 120</div>
+          <div className="copy-no-margin">RARITY: ELITE</div>
+        </div>
         <div id="section_how_to" className="section how-to">
           <h2>How To</h2>
             <div className="copy-inner">{'Connect and pay through Metamask or PayPal'}</div>
