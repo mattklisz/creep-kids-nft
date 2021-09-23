@@ -2,12 +2,12 @@ import React from 'react'
 import { isMobile } from 'react-device-detect'
 import {
   Button,
+  Gallery,
   Menu
 } from '../../components'
 import './Home.css'
 
 export const Home = () => {
-
   const getContainerClass = () => isMobile ? '' : 'grid-container';
 
   return (
@@ -29,7 +29,7 @@ export const Home = () => {
           {'Creep Kids are immortal souls minted in real time, programmatically on the Ethereum blockchain. There are 1000 unique possibilities, no two are alike. They are NFT\'s that can be traded on Opensea.'}
         </div>
         <div className="gallery">
-          Gallery TBD
+          <Gallery />
         </div>
         <div className="copy">
           {'When minted, each Creep Kid is assigned a unique set of RPG attributes and their names are created using GPT-3.'}

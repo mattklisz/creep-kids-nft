@@ -1,0 +1,10 @@
+.gallery-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gallery-item {
+  height: 5rem;
+  width: 5rem;
+  margin-bottom: 0.5rem;
+}
