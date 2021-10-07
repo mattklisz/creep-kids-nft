@@ -1,0 +1,58 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(1rem, 30rem) auto minmax(1rem, 30rem);
+}
+
+.home-container {
+  grid-column: 2;
+  color: white;
+}
+
+.menu {
+  margin-top: 2rem;
+}
+
+.teaser {
+  margin: 4rem auto 0 auto;
+  height: 18rem;
+  width: 18rem;
+}
+
+.example-creep {
+  color: red;
+}
+
+.example-creep-name {
+  font-size: 1.5rem;
+}
+
+.example-creep-image {
+  height: 16rem;
+  width: 16rem;
+  margin: 1rem auto;
+}
+
+.section {
+  margin-top: 3rem;
+}
+
+.copy {
+  margin: 2rem auto;
+}
+
+.copy-inner {
+  margin: 1rem auto;
+}
+
+.copy-label {
+  color: white;
+}
+
+.copy-no-margin {
+  margin: 0 auto;
+}
+
+.social-logo {
+  display: inline-block;
+  margin-right: 2rem;
+}
