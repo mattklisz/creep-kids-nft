@@ -1,14 +1,23 @@
 import React from 'react'
 import './Gallery.css'
 
-const rowOne = [1, 2, 3, 4]
-const rowTwo = [5, 6, 7, 8]
+const rowOne = [1, 2, 3]
+const rowTwo = [4, 0, 5]
+const rowThree = [6, 7, 8]
 
 export const Gallery = () => {
   const Creep = ({ index }) => {
     return (
       <div className="gallery-item">
         <img src={`./assets/images/creep-${index}.gif`} alt="" />
+      </div>
+    )
+  }
+
+  const MysteryCreep = () => {
+    return (
+      <div className="gallery-item-mystery">
+        {'?'}
       </div>
     )
   }
@@ -22,7 +31,14 @@ export const Gallery = () => {
       </div>
       <div className="gallery-row">
         {
-          rowTwo.map((i) => <Creep index={i} />)
+          rowTwo.map((i) => {
+            return i !== 0 ? <Creep index={i} /> : <MysteryCreep />
+          })
+        }
+      </div>
+      <div className="gallery-row">
+        {
+          rowThree.map((i) => <Creep index={i} />)
         }
       </div>
     </div>
