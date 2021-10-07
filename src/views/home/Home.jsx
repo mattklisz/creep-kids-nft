@@ -2,8 +2,10 @@ import React from 'react'
 import { isMobile } from 'react-device-detect'
 import {
   Button,
+  // DiscordLogo,
   Gallery,
-  Menu
+  Menu,
+  // TwitterLogo
 } from '../../components'
 import './Home.css'
 
@@ -19,6 +21,14 @@ export const Home = () => {
         <div className="menu">
           <Menu />
         </div>
+        {/* <div>
+          <div className="social-logo">
+            <DiscordLogo />
+          </div>
+          <div className="social-logo">
+            <TwitterLogo />
+          </div>
+        </div> */}
         <div className="teaser">
           <img src={"./assets/images/NFT-TEASE-V1.gif"} alt="" />
         </div>
@@ -26,7 +36,7 @@ export const Home = () => {
           <Button text={'mint'} />
         </div>
         <div className="copy">
-          {'Creep Kids are immortal souls minted in real time, programmatically on the Ethereum blockchain. There are 1000 unique possibilities, no two are alike. They are NFT\'s that can be traded on Opensea.'}
+          {'Creep Kids are immortal souls minted in real time, programmatically on the Ethereum blockchain. There are 1000 unique possibilities, no two are alike. They are NFTs that can be traded on Opensea.'}
         </div>
         <div className="gallery">
           <Gallery />
