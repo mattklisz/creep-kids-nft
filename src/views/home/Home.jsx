@@ -16,14 +16,11 @@ export const Home = () => {
   return (
     <div className={`${getContainerClass()}`}>
       <div className="socials">
-        <a href="https://www.instagram.com/creepkids_nft" target="_blank" rel="noreferrer" className="social-logo">
-          <InstagramLogo />
+        <a href="https://www.instagram.com/creepkids_nft" className="social-logo">INSTAGRAM
         </a>
-        <a href="https://discord.gg/cKy3RRfz" target="_blank" rel="noreferrer" className="social-logo">
-          <DiscordLogo />
+        <a href="https://discord.gg/cKy3RRfz" className="social-logo">DISCORD
         </a>
-        <a href="https://twitter.com/creepkids" target="_blank" rel="noreferrer" className="social-logo">
-          <TwitterLogo />
+        <a href="https://twitter.com/creepkids" className="social-logo">TWITTER
         </a>
       </div>
       <div className="home-container">
@@ -51,7 +48,7 @@ export const Home = () => {
           <Gallery />
         </div>
         <div className="copy">
-          {'When minted, each Creep Kid is assigned a unique set of RPG attributes and their names are created using GPT-3.'}
+          {'When minted, each Creep Kid is assigned a unique set of RPG attributes.'}
         </div>
         <CreepCard
           name={'SCORNED DEMON'}
