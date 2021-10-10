@@ -31,7 +31,7 @@ export const Home = () => {
           <Menu />
         </div> */}
         <div className="teaser">
-          <img src={"./assets/images/NFT-TEASE-V1.gif"} alt="" />
+          <img src={"./assets/images/nft_teaser.gif"} alt="" />
         </div>
         <div id="section_buy" className="section mint">
           <div className='mint-button'>
