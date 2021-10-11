@@ -8,7 +8,7 @@ const rowThree = [6, 7, 8]
 export const Gallery = () => {
   const Creep = ({ index }) => {
     return (
-      <div className="gallery-item">
+      <div className="gallery-item" key={`gallery-item-${index}`}>
         <img src={`./assets/images/creep-${index}.gif`} alt="" />
       </div>
     )
