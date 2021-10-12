@@ -1,6 +1,6 @@
 import Onboard from 'bnc-onboard';
 import Web3 from 'web3';
-import {API_KEY} from '../private/onboard_api';
+import {API_KEY} from '../../private/onboard_api';
 
 let web3;
 
