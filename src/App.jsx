@@ -11,8 +11,8 @@ import WEB3_CONNECT from './components/web3/web3_connect'
 
 const App = () => (
   <Router>
-    <WEB3_CONNECT />,
     <div className="App">
+      <WEB3_CONNECT />,
       <Switch>
         <Route path={Routes.HOME}>
           <Home />
