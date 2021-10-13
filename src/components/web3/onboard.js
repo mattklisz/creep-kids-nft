@@ -6,7 +6,7 @@ let web3;
 
 export const onboard = Onboard({
   dappId: API_KEY,
-  networkId: 1,
+  networkId: 4,
   subscriptions: {
     wallet: wallet => {
       web3 = new Web3(wallet.provider)
