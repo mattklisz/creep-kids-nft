@@ -21,3 +21,13 @@ export const logAddress = async () => {
   var accounts = await web3.eth.getAccounts();
   console.log("Accounts: " + accounts);
 }
+
+export const interactContractTest = async () => {
+  var accounts = await web3.eth.getAccounts();
+  const sendAccount = accounts[0];
+
+  //TODO
+  //get contract ABI -- Can I just get this from hardhat build?
+  //get reference to contract -- web3.eth?
+  //Call get name function on already deployed contract
+}
