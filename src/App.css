@@ -3,7 +3,6 @@
   font-family: 'Courier New', monospace;
   text-align: center;
   background-color: black;
-  height: 100vh;
   padding: 1rem;
   overflow-y: scroll;
 }
