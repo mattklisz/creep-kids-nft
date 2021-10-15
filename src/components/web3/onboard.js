@@ -32,6 +32,10 @@ export const interactContractTest = async () => {
   var contract = new web3.eth.Contract(contract_abi,contract_address);
   console.log("After Contract Establish!");
   //TODO
+  await contract.methods.getMessage().call(function(error, result){
+    console.log("result: " + result)
+    console.log("error: " + error )
+  });
   //get contract ABI -- Can I just get this from hardhat build?
   //get reference to contract -- web3.eth?
   //Call get name function on already deployed contract
