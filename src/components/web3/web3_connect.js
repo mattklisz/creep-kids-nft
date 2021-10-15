@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {onboard, logAddress} from './onboard'
+import {onboard, logAddress, interactContractTest} from './onboard'
 
 function WEB3_CONNECT(){ 
   
@@ -11,6 +11,7 @@ function WEB3_CONNECT(){
       if(connected){
         await onboard.walletCheck();
         await logAddress();
+        await interactContractTest(); 
       }
     }
     ConnectWallet();
