@@ -197,16 +197,15 @@ export const contract_abi = [
           "internalType": "address",
           "name": "receiver",
           "type": "address"
-        }
-      ],
-      "name": "createCreepKid",
-      "outputs": [
+        },
         {
           "internalType": "uint256",
-          "name": "",
+          "name": "count",
           "type": "uint256"
         }
       ],
+      "name": "createCreepKid",
+      "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
     },

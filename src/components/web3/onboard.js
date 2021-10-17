@@ -8,8 +8,7 @@ let web3;
 //const contract_address = "0x865AAd4689e5aBA7D0610f3e17BAF4439EA059eC";
 //const contract_address = "0x998BA9FaF4052f542124A638c0b3606C743495aB";
 //const contract_address = "0xE7D40De0600eDEE0e549d89D9Bd65Bf6767af2aa";
-const contract_address = "0x88cf504f9BF66f5091fdEbf7e4d7069aF6c4fdE8";
-
+const contract_address = "0xC30136d8656bf263779f3f2eA6a644254435FDab";
 export const onboard = Onboard({
   dappId: API_KEY,
   networkId: 4,
@@ -42,13 +41,13 @@ export const interactContractTest = async () => {
   });
 
   //get gas
-  const gas = await contract.methods.createCreepKid(sendAccount).estimateGas({
+  const gas = await contract.methods.createCreepKid(sendAccount,5).estimateGas({
     from:sendAccount
   });
   console.log("Gas Price: ", gas)
 
   //mint
-  const mintTx = await contract.methods.createCreepKid(sendAccount).send({
+  const mintTx = await contract.methods.createCreepKid(sendAccount,5).send({
     from: sendAccount,
     gas
   },function(error, result){
