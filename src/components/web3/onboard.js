@@ -29,14 +29,32 @@ export const logAddress = async () => {
 export const interactContractTest = async () => {
   var accounts = await web3.eth.getAccounts();
   const sendAccount = accounts[0];
+  console.log("Send Account: ", sendAccount);
 
   var contract = new web3.eth.Contract(contract_abi,contract_address);
   console.log("After Contract Establish!");
-  //TODO
+
   await contract.methods.getMessage().call(function(error, result){
     console.log("result: " + result)
     console.log("error: " + error )
   });
+
+  //get gas
+  const gas = await contract.methods.createCreepKid(sendAccount).estimateGas({
+    from:sendAccount
+  });
+  console.log("Gas Price: ", gas)
+
+  const mintTx = await contract.methods.createCreepKid(sendAccount).send({
+    from: sendAccount,
+    gas
+  },function(error, result){
+    console.log("result: " + result)
+    console.log("error: " + error )
+  });
+  console.log("Called mint on contract");
+  const receipt = await mintTx.wait();
+  console.log("After recepit");
   //get contract ABI -- Can I just get this from hardhat build?
   //get reference to contract -- web3.eth?
   //Call get name function on already deployed contract
