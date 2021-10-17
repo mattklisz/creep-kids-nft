@@ -5,7 +5,8 @@ import {contract_abi} from './contract_abi';
 
 let web3;
 
-const contract_address = "0x865AAd4689e5aBA7D0610f3e17BAF4439EA059eC";
+//const contract_address = "0x865AAd4689e5aBA7D0610f3e17BAF4439EA059eC";
+const contract_address = "0x998BA9FaF4052f542124A638c0b3606C743495aB";
 
 export const onboard = Onboard({
   dappId: API_KEY,
