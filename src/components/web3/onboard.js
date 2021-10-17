@@ -45,6 +45,7 @@ export const interactContractTest = async () => {
   });
   console.log("Gas Price: ", gas)
 
+  //mint
   const mintTx = await contract.methods.createCreepKid(sendAccount).send({
     from: sendAccount,
     gas
@@ -52,6 +53,8 @@ export const interactContractTest = async () => {
     console.log("result: " + result)
     console.log("error: " + error )
   });
+  
+  console.log("mint tx: ", mintTx);
 
 
 }
