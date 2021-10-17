@@ -52,10 +52,6 @@ export const interactContractTest = async () => {
     console.log("result: " + result)
     console.log("error: " + error )
   });
-  console.log("Called mint on contract");
-  const receipt = await mintTx.wait();
-  console.log("After recepit");
-  //get contract ABI -- Can I just get this from hardhat build?
-  //get reference to contract -- web3.eth?
-  //Call get name function on already deployed contract
+
+
 }
