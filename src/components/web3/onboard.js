@@ -6,7 +6,9 @@ import {contract_abi} from './contract_abi';
 let web3;
 
 //const contract_address = "0x865AAd4689e5aBA7D0610f3e17BAF4439EA059eC";
-const contract_address = "0x998BA9FaF4052f542124A638c0b3606C743495aB";
+//const contract_address = "0x998BA9FaF4052f542124A638c0b3606C743495aB";
+//const contract_address = "0xE7D40De0600eDEE0e549d89D9Bd65Bf6767af2aa";
+const contract_address = "0x88cf504f9BF66f5091fdEbf7e4d7069aF6c4fdE8";
 
 export const onboard = Onboard({
   dappId: API_KEY,
@@ -52,9 +54,10 @@ export const interactContractTest = async () => {
   },function(error, result){
     console.log("result: " + result)
     console.log("error: " + error )
+    if(error) {
+      console.log("Error detetected");
+    }
   });
   
   console.log("mint tx: ", mintTx);
-
-
 }
