@@ -1,13 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { isMobile } from 'react-device-detect'
 import {
   CreepCard,
   Gallery,
-  // Menu,
+  Menu,
 } from '../../components'
 import './Home.css'
 
 export const Home = () => {
+  const [isConnected, setIsConnected] = useState(false)
+  const [isConnecting, setIsConnecting] = useState(false)
+  const [mintCount, setMintCount] = useState(1)
+  const [isMinting, setIsMinting] = useState(false)
+  const [mintSuccess, setMintSuccess] = useState(false)
+
+  const onConnectHandler = () => {
+    console.log('hit connect')
+    setIsConnecting(true)
+    setIsConnected(true)
+
+    // setIsConnected true/false depending on api response, then setIsConnecting(false)
+  }
+
+  const onMintHandler = () => {
+    console.log('hit mint')
+    setIsMinting(true)
+
+    // setMintSuccess true/false depending on api response, then setIsMinting(false)
+  }
+
   return (
     <div>
       <div className={`header-${isMobile ? 'mobile' : 'desktop'}`}>
@@ -20,14 +41,17 @@ export const Home = () => {
           <div className="logo">
             <img src={"./assets/images/creep_kids_logo-red.gif"} alt="" />
           </div>
-          {/* <div className="menu">
+          <div className="menu">
             <Menu />
-          </div> */}
+          </div>
           <div className="teaser">
             <img src={"./assets/images/nft_teaser.gif"} alt="" />
           </div>
           <div id="section_buy" className="section mint">
-            <div className='mint-button'>
+            <div className={`${isConnecting ? 'button-disabled ' : 'button-enabled '}${isConnected ? 'connected-button' : 'connect-button'}`} onClick={onConnectHandler}>
+              <img src={`${isConnected ? './assets/images/connected_wallet.gif' : './assets/images/connect_wallet.gif'}`} alt="" />
+            </div>
+            <div className={`${isMinting ? 'button-disabled ' : 'button-enabled '}mint-button`} onClick={onMintHandler}>
               <img src={"./assets/images/mint.gif"} alt="" />
             </div>
             <div className="copy coming-soon">
@@ -52,7 +76,7 @@ export const Home = () => {
             intelligence={120}
             rarity={'ELITE'}
           />
-          {/* <div id="section_how_to" className="section how-to">
+          <div id="section_how_to" className="section how-to">
             <h2>How To</h2>
               <div className="copy-inner">{'Connect and pay through Metamask or PayPal'}</div>
               <div className="copy-inner">{'Metamask: Install or send ETH to your Metamask wallet (purchasing ETH is easy through Coinbase or PayPal)'}</div>
@@ -74,7 +98,7 @@ export const Home = () => {
           <div id="section_help" className="section help">
             <h2>Help</h2>
             {'TBD'}
-          </div> */}
+          </div>
         <div className="footer"></div>
         </div>
       </div>

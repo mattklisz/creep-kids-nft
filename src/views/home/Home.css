@@ -52,6 +52,18 @@
   padding: 0.5rem;
 }
 
+.connect-button {
+  height: 68px;
+  width: 351px;
+  margin: 0 auto 1rem auto;
+}
+
+.connected-button {
+  height: 62px;
+  width: 316px;
+  margin: 0 auto 1rem auto;
+}
+
 .mint-button {
   height: 68px;
   width: 159px;
@@ -64,4 +76,13 @@
 
 .footer {
   padding: 2rem 0;
+}
+
+.button-enabled {
+  cursor: pointer;
+}
+
+.button-disabled {
+  cursor: default;
+  pointer-events: none;
 }
