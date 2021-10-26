@@ -18,20 +18,6 @@
   width: 18rem;
 }
 
-.example-creep {
-  color: red;
-}
-
-.example-creep-name {
-  font-size: 1.5rem;
-}
-
-.example-creep-image {
-  height: 16rem;
-  width: 16rem;
-  margin: 1rem auto;
-}
-
 .section {
   margin-top: 3rem;
 }
@@ -52,7 +38,30 @@
   margin: 0 auto;
 }
 
+.header-desktop {
+  padding: 1rem 0;
+  text-align: right;
+}
+
+.header-mobile {
+  padding: 1rem 0;
+  text-align: center;
+}
+
 .social-logo {
-  display: inline-block;
-  margin-right: 2rem;
+  padding: 0.5rem;
+}
+
+.mint-button {
+  height: 68px;
+  width: 159px;
+  margin: 0 auto;
+}
+
+.coming-soon {
+  font-weight: bold;
+}
+
+.footer {
+  padding: 2rem 0;
 }
