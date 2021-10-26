@@ -16,8 +16,8 @@ export const Gallery = () => {
 
   const MysteryCreep = () => {
     return (
-      <div className="gallery-item-mystery">
-        {'?'}
+      <div className="gallery-item">
+        <img src={`./assets/images/question_mark.gif`} alt="" />
       </div>
     )
   }

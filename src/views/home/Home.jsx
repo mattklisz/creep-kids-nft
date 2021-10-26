@@ -17,7 +17,6 @@ export const Home = () => {
   const onConnectHandler = () => {
     console.log('hit connect')
     setIsConnecting(true)
-    setIsConnected(true)
 
     // setIsConnected true/false depending on api response, then setIsConnecting(false)
   }
