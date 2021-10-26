@@ -70,6 +70,19 @@
   margin: 0 auto;
 }
 
+.mint-count-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.mint-count-control {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 2rem;
+}
+
 .coming-soon {
   font-weight: bold;
 }
@@ -85,4 +98,5 @@
 .button-disabled {
   cursor: default;
   pointer-events: none;
+  color: grey;
 }

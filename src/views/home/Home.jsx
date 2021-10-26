@@ -53,6 +53,17 @@ export const Home = () => {
             <div className={`${isMinting ? 'button-disabled ' : 'button-enabled '}mint-button`} onClick={onMintHandler}>
               <img src={"./assets/images/mint.gif"} alt="" />
             </div>
+            <div className="mint-count-selector">
+              <div className={`${mintCount === 1 ? 'button-disabled ' : 'button-enabled '}mint-count-control`} onClick={() => setMintCount(mintCount - 1)}>
+                {'<'}
+              </div>
+              <div className="mint-count">
+                {mintCount}
+              </div>
+              <div className={`${mintCount === 10 ? 'button-disabled ' : 'button-enabled '}mint-count-control`} onClick={() => setMintCount(mintCount + 1)}>
+                {'>'}
+              </div>
+            </div>
             <div className="copy coming-soon">
               {'- COMING 10/31/2021 -'}
             </div>
