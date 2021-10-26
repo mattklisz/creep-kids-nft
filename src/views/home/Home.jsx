@@ -64,9 +64,6 @@ export const Home = () => {
                 {'>'}
               </div>
             </div>
-            <div className="copy coming-soon">
-              {'- COMING 10/31/2021 -'}
-            </div>
           </div>
           <div className="copy">
             {'Creep Kids are immortal souls minted in real time, programmatically on the Ethereum blockchain. There are 1000 unique possibilities, no two are alike. They are NFTs that can be traded on Opensea.'}
