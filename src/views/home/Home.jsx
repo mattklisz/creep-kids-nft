@@ -17,10 +17,15 @@ export const Home = () => {
 
   const onConnectHandler = () => {
     console.log('hit connect')
-    setIsConnecting(true)
-    WEB3_CONNECT()
+    console.log("Is connecting", isConnecting);
+    console.log("Is connected", isConnected);
+    if(!isConnected && !isConnecting)
+    {
+      setIsConnecting(true)
+      // setIsConnected true/false depending on api response, then setIsConnecting(false)
+      WEB3_CONNECT(setIsConnecting, setIsConnected)
+    }
 
-    // setIsConnected true/false depending on api response, then setIsConnecting(false)
   }
 
   const onMintHandler = () => {
