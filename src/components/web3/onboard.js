@@ -41,13 +41,13 @@ export const interactContractTest = async () => {
   });
 
   //get gas
-  const gas = await contract.methods.createCreepKid(sendAccount,5).estimateGas({
+  const gas = await contract.methods.createCreepKid(sendAccount,1).estimateGas({
     from:sendAccount
   });
   console.log("Gas Price: ", gas)
 
   //mint
-  const mintTx = await contract.methods.createCreepKid(sendAccount,5).send({
+  const mintTx = await contract.methods.createCreepKid(sendAccount,1).send({
     from: sendAccount,
     gas
   },function(error, result){
