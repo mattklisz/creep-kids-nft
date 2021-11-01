@@ -6,6 +6,7 @@ import {
   Menu,
 } from '../../components'
 import './Home.css'
+import WEB3_CONNECT from '../../components/web3/web3_connect'
 
 export const Home = () => {
   const [isConnected, setIsConnected] = useState(false)
@@ -17,6 +18,7 @@ export const Home = () => {
   const onConnectHandler = () => {
     console.log('hit connect')
     setIsConnecting(true)
+    WEB3_CONNECT()
 
     // setIsConnected true/false depending on api response, then setIsConnecting(false)
   }
