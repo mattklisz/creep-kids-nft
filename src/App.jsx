@@ -7,10 +7,12 @@ import {
 import { Routes } from './routes'
 import { Home } from './views'
 import './App.css'
+import WEB3_CONNECT from './components/web3/web3_connect'
 
 const App = () => (
   <Router>
     <div className="App">
+      <WEB3_CONNECT />,
       <Switch>
         <Route path={Routes.HOME}>
           <Home />
