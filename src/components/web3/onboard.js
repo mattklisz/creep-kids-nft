@@ -8,10 +8,11 @@ let web3;
 //const contract_address = "0x865AAd4689e5aBA7D0610f3e17BAF4439EA059eC";
 //const contract_address = "0x998BA9FaF4052f542124A638c0b3606C743495aB";
 //const contract_address = "0xE7D40De0600eDEE0e549d89D9Bd65Bf6767af2aa";
-const contract_address = "0xC30136d8656bf263779f3f2eA6a644254435FDab";
+//const contract_address = "0xC30136d8656bf263779f3f2eA6a644254435FDab";
+const contract_address = "0x586fe06B3682e3cCF013846B4dB093b75218526E";
 export const onboard = Onboard({
   dappId: API_KEY,
-  networkId: 4,
+  networkId: 1,
   subscriptions: {
     wallet: wallet => {
       web3 = new Web3(wallet.provider)
@@ -35,21 +36,23 @@ export const interactContractTest = async () => {
   var contract = new web3.eth.Contract(contract_abi,contract_address);
   console.log("After Contract Establish!");
 
-  await contract.methods.getMessage().call(function(error, result){
-    console.log("result: " + result)
-    console.log("error: " + error )
-  });
-
+  const receiveAddress = "0x7d865AB4Fab0cC443fA91A6B08897ac557E28B7F"
+  const mintCount = 6;
   //get gas
-  const gas = await contract.methods.createCreepKid(sendAccount,1).estimateGas({
+  const gas = await contract.methods.promoMint(receiveAddress,mintCount).estimateGas({
     from:sendAccount
   });
+
   console.log("Gas Price: ", gas)
 
+  var padded = gas + (gas * .18);
+  console.log(padded);
+  var finalGas = Math.trunc(padded);
+  console.log(finalGas);
   //mint
-  const mintTx = await contract.methods.createCreepKid(sendAccount,1).send({
+  const mintTx = await contract.methods.promoMint(receiveAddress,mintCount).send({
     from: sendAccount,
-    gas
+    finalGas
   },function(error, result){
     console.log("result: " + result)
     console.log("error: " + error )
@@ -58,5 +61,5 @@ export const interactContractTest = async () => {
     }
   });
   
-  console.log("mint tx: ", mintTx);
+  //console.log("mint tx: ", mintTx);
 }
