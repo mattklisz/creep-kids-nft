@@ -4,21 +4,32 @@ import { isMobile } from 'react-device-detect'
 
 import './CreepCard.css'
 
-export const CreepCard = ({ name, imagePath, strength, speed, intelligence, rarity }) => {
+export const CreepCard = ({ name, imagePath, attributes }) => {
+  const {
+    strength,
+    intelligence,
+    agility,
+    luck,
+    magic,
+    health,
+    cursed
+  } = attributes;
+
   return (
     <div className="creep">
-      
       <div className="creep-image-attributes">
         <div className={`creep-image${isMobile ? '-mobile' : ''}`}>
-          <img src={imagePath} alt="" />
+          <img src={imagePath} alt=""/>
         </div>
         <div>
           <div className="creep-name">{name}</div>
-          <div className="copy-inner copy-label">ATTRIBUTES</div>
           <div className="copy-no-margin">{`Strength: ${strength}`}</div>
-          <div className="copy-no-margin">{`Speed: ${speed}`}</div>
           <div className="copy-no-margin">{`Intelligence: ${intelligence}`}</div>
-          <div className="copy-no-margin">{`Rarity: ${rarity}`}</div>
+          <div className="copy-no-margin">{`Agility: ${agility}`}</div>
+          <div className="copy-no-margin">{`Luck: ${luck}`}</div>
+          <div className="copy-no-margin">{`Magic: ${magic}`}</div>
+          <div className="copy-no-margin">{`Health: ${health}`}</div>
+          <div className="copy-no-margin">{`Cursed: ${cursed}`}</div>
         </div>
       </div>
     </div>

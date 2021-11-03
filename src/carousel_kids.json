@@ -83,7 +83,7 @@
       "imagePath": "./assets/images/sea_monster_17.gif",
       "attributes": {
         "strength": 7,
-        "intelligence": 0,
+        "intelligence": 1,
         "agility": 5,
         "luck": 10,
         "magic": 6,

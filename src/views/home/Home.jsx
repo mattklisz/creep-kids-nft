@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { isMobile } from 'react-device-detect'
 import { round } from 'lodash'
 import {
-  CreepCard,
+  Carousel,
   Gallery,
   Menu,
 } from '../../components'
@@ -84,6 +84,7 @@ export const Home = () => {
               <div className="copy-inner">{'Metamask: Install or send ETH to your Metamask wallet (purchasing ETH is easy through Coinbase or PayPal)'}</div>
               <div className="copy-inner">{'Paypal: TBD'}</div>
           </div> */}
+          <Carousel />
           <div id="section_roadmap" className="section roadmap">
             <h2>Roadmap</h2>
             <div className="copy-inner">{'10% Rarity Tools calculation'}</div>
