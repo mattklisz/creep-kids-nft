@@ -94,6 +94,16 @@
   padding: 2rem 0;
 }
 
+.footer-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item {
+  padding: 0.5rem;
+}
+
 .button-enabled {
   cursor: pointer;
 }

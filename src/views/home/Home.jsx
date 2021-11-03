@@ -78,14 +78,6 @@ export const Home = () => {
           <div className="copy">
             {'When minted, each Creep Kid is assigned a unique set of RPG attributes.'}
           </div>
-          <CreepCard
-            name={'SCORNED DEMON'}
-            imagePath={'./assets/images/example-creep.gif'}
-            strength={240}
-            speed={666}
-            intelligence={120}
-            rarity={'Elite'}
-          />
           {/* <div id="section_how_to" className="section how-to">
             <h2>How To</h2>
               <div className="copy-inner">{'Connect and pay through Metamask or PayPal'}</div>
@@ -124,7 +116,14 @@ export const Home = () => {
             <h2>Help</h2>
             {'TBD'}
           </div> */}
-          {/* <div className="footer"></div> */}
+          <div id="section_contact" className="footer">
+            <h4>CONTACT US</h4>
+            <div className="footer-items">
+              <a href="https://discord.gg/cKy3RRfz" target="_blank" rel="noreferrer" className="footer-item">DISCORD</a>
+              <span className="footer-item">{' | '}</span>
+              <div className="footer-item">admin@creepkids.io</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

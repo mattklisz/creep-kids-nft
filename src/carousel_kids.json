@@ -1,0 +1,108 @@
+{
+  "kids": [
+    {
+      "name": "Wolfman #14",
+      "imagePath": "./assets/images/wolfman_14.gif",
+      "attributes": {
+        "strength": 5,
+        "intelligence": 10,
+        "agility": 6,
+        "luck": 6,
+        "magic": 10,
+        "health": 7,
+        "cursed": 9
+      }
+    },
+    {
+      "name": "Demon #71",
+      "imagePath": "./assets/images/demon_71.gif",
+      "attributes": {
+        "strength": 10,
+        "intelligence": 5,
+        "agility": 4,
+        "luck": 10,
+        "magic": 10,
+        "health": 3,
+        "cursed": 7
+      }
+    },
+    {
+      "name": "Vampire #83",
+      "imagePath": "./assets/images/vampire_83.gif",
+      "attributes": {
+        "strength": 2,
+        "intelligence": 10,
+        "agility": 10,
+        "luck": 10,
+        "magic": 2,
+        "health": 1,
+        "cursed": 5
+      }
+    },
+    {
+      "name": "Alien #4",
+      "imagePath": "./assets/images/alien_4.gif",
+      "attributes": {
+        "strength": 10,
+        "intelligence": 9,
+        "agility": 10,
+        "luck": 7,
+        "magic": 4,
+        "health": 7,
+        "cursed": 3
+      }
+    },
+    {
+      "name": "Princess #160",
+      "imagePath": "./assets/images/princess_160.gif",
+      "attributes": {
+        "strength": 7,
+        "intelligence": 10,
+        "agility": 5,
+        "luck": 1,
+        "magic": 10,
+        "health": 8,
+        "cursed": 1
+      }
+    },
+    {
+      "name": "Zombie #119",
+      "imagePath": "./assets/images/zombie_119.gif",
+      "attributes": {
+        "strength": 10,
+        "intelligence": 7,
+        "agility": 6,
+        "luck": 10,
+        "magic": 10,
+        "health": 10,
+        "cursed": 10
+      }
+    },
+    {
+      "name": "Sea Monster #17",
+      "imagePath": "./assets/images/sea_monster_17.gif",
+      "attributes": {
+        "strength": 7,
+        "intelligence": 0,
+        "agility": 5,
+        "luck": 10,
+        "magic": 6,
+        "health": 9,
+        "cursed": 10
+      }
+    },
+    {
+      "name": "Punk #12",
+      "imagePath": "./assets/images/punk_12.gif",
+      "attributes": {
+        "strength": 9,
+        "intelligence": 10,
+        "agility": 4,
+        "luck": 9,
+        "magic": 6,
+        "health": 6,
+        "cursed": 7
+      }
+    }
+  ]
+}

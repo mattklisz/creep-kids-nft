@@ -23,6 +23,7 @@ export const Menu = () => {
           {/* <a href="#section_faq" className="menu-link">FAQ</a> */}
           <a href="#section_about" className="menu-link">ABOUT</a>
           {/* <a href="#section_help" className="menu-link">HELP</a> */}
+          <a href="#section_contact" className="menu-link">CONTACT</a>
         </div> : null
       }
     </div>
@@ -35,6 +36,7 @@ export const Menu = () => {
       {/* <a href="#section_faq">FAQ</a> */}
       <a href="#section_about">ABOUT</a>
       {/* <a href="#section_help">HELP</a> */}
+      <a href="#section_contact">CONTACT</a>
     </div>
   )
 }

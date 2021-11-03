@@ -28,8 +28,13 @@ export const CreepCard = ({ name, imagePath, strength, speed, intelligence, rari
 CreepCard.propTypes = {
   name: PropTypes.string.isRequired,
   imagePath: PropTypes.string.isRequired,
-  strength: PropTypes.number.isRequired,
-  speed: PropTypes.number.isRequired,
-  intelligence: PropTypes.number.isRequired,
-  rarity: PropTypes.string.isRequired
+  attributes: PropTypes.shape({
+    strength: PropTypes.number,
+    intelligence: PropTypes.number,
+    agility: PropTypes.number,
+    luck: PropTypes.number,
+    magic: PropTypes.number,
+    health: PropTypes.number,
+    cursed: PropTypes.number
+  }).isRequired
 }
