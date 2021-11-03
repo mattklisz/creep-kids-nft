@@ -38,6 +38,11 @@
   margin: 0 auto;
 }
 
+.copy-small {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
 .half-top {
   margin-top: 0.5rem;
 }
@@ -112,4 +117,8 @@
   cursor: default;
   pointer-events: none;
   color: grey;
+}
+
+.coming-soon {
+  font-weight: bold;
 }

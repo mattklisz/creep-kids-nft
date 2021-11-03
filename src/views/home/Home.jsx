@@ -12,7 +12,7 @@ export const Home = () => {
   const [isConnected, setIsConnected] = useState(false)
   const [isConnecting, setIsConnecting] = useState(false)
   const [mintCount, setMintCount] = useState(1)
-  const [isMinting, setIsMinting] = useState(false)
+  const [isMinting, setIsMinting] = useState(true)
   const [mintSuccess, setMintSuccess] = useState(false)
 
   const onConnectHandler = () => {
@@ -48,13 +48,16 @@ export const Home = () => {
             <img src={"./assets/images/nft_teaser.gif"} alt="" />
           </div>
           <div id="section_buy" className="section mint">
-            <div className={`${isConnecting ? 'button-disabled ' : 'button-enabled '}${isConnected ? 'connected-button' : 'connect-button'}`} onClick={onConnectHandler}>
+            {/* <div className={`${isConnecting ? 'button-disabled ' : 'button-enabled '}${isConnected ? 'connected-button' : 'connect-button'}`} onClick={onConnectHandler}>
               <img src={`${isConnected ? './assets/images/connected_wallet.gif' : './assets/images/connect_wallet.gif'}`} alt="" />
-            </div>
+            </div> */}
             <div className={`${isMinting ? 'button-disabled ' : 'button-enabled '}mint-button`} onClick={onMintHandler}>
               <img src={"./assets/images/mint.gif"} alt="" />
             </div>
-            <div className="cost-label">
+            <div className="copy coming-soon">
+              {'- COMING SOON -'}
+            </div>
+            {/* <div className="cost-label">
               {`${round(0.0666 * mintCount, 4)} ETH`}
             </div>
             <div className="mint-count-selector">
@@ -67,7 +70,7 @@ export const Home = () => {
               <div className={`${mintCount === 10 ? 'button-disabled ' : 'button-enabled '}mint-count-control`} onClick={() => setMintCount(mintCount + 1)}>
                 {'>'}
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="copy">
             {'Creep Kids are immortal souls minted in real time, programmatically on the Ethereum blockchain. There are 1000 unique possibilities, no two are alike. They are NFTs that can be traded on Opensea.'}
@@ -85,6 +88,21 @@ export const Home = () => {
               <div className="copy-inner">{'Paypal: TBD'}</div>
           </div> */}
           <Carousel />
+          <div id="section_status" className="section status">
+            <h2>Status</h2>
+            <div className="copy-inner">
+              {'Smart contract is live on Mainnet! Public minting is still locked, but the team has minted 40 Creep Kids as part of testing. View them on Opensea'}
+              <a href="https://opensea.io/collection/creep-kidsAnd" target="_blank" rel="noreferrer" className="social-logo">here</a>
+            </div>
+            <div className="copy-inner">
+              {'View the smart contract'}
+              <a href="https://github.com/LucasMoskun/creep_kids_contract/blob/main/CreepKidsNFT.sol" target="_blank" rel="noreferrer" className="social-logo">here</a>
+            </div>
+            <div className="copy-inner">
+              {'And contract address: '}
+              <span className="copy-small">{'0x586fe06b3682e3ccf013846b4db093b75218526e'}</span>
+            </div>
+          </div>
           <div id="section_roadmap" className="section roadmap">
             <h2>Roadmap</h2>
             <div className="copy-inner">{'10% Rarity Tools calculation'}</div>

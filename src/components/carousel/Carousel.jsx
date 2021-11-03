@@ -10,7 +10,8 @@ export const Carousel = () => {
     autoplay: true,
     defaultControlsConfig: {
       nextButtonText: '>',
-      prevButtonText: '<'
+      prevButtonText: '<',
+      pagingDotsStyle: { display: 'none' }
     },
     wrapAround: true
   }
