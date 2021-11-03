@@ -38,6 +38,10 @@
   margin: 0 auto;
 }
 
+.half-top {
+  margin-top: 0.5rem;
+}
+
 .header-desktop {
   padding: 1rem 0;
   text-align: right;
@@ -74,7 +78,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
 }
 
 .mint-count-control {
@@ -83,8 +86,8 @@
   padding: 0 2rem;
 }
 
-.coming-soon {
-  font-weight: bold;
+.cost-label {
+  margin-top: 1rem;
 }
 
 .footer {

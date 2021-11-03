@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { isMobile } from 'react-device-detect'
+import { round } from 'lodash'
 import {
   CreepCard,
   Gallery,
@@ -53,12 +54,15 @@ export const Home = () => {
             <div className={`${isMinting ? 'button-disabled ' : 'button-enabled '}mint-button`} onClick={onMintHandler}>
               <img src={"./assets/images/mint.gif"} alt="" />
             </div>
+            <div className="cost-label">
+              {`${round(0.0666 * mintCount, 4)} ETH`}
+            </div>
             <div className="mint-count-selector">
               <div className={`${mintCount === 1 ? 'button-disabled ' : 'button-enabled '}mint-count-control`} onClick={() => setMintCount(mintCount - 1)}>
                 {'<'}
               </div>
               <div className="mint-count">
-                {mintCount}
+                {`${mintCount} QTY`}
               </div>
               <div className={`${mintCount === 10 ? 'button-disabled ' : 'button-enabled '}mint-count-control`} onClick={() => setMintCount(mintCount + 1)}>
                 {'>'}
@@ -77,36 +81,50 @@ export const Home = () => {
           <CreepCard
             name={'SCORNED DEMON'}
             imagePath={'./assets/images/example-creep.gif'}
-            soulIndex={13}
             strength={240}
             speed={666}
             intelligence={120}
-            rarity={'ELITE'}
+            rarity={'Elite'}
           />
-          <div id="section_how_to" className="section how-to">
+          {/* <div id="section_how_to" className="section how-to">
             <h2>How To</h2>
               <div className="copy-inner">{'Connect and pay through Metamask or PayPal'}</div>
               <div className="copy-inner">{'Metamask: Install or send ETH to your Metamask wallet (purchasing ETH is easy through Coinbase or PayPal)'}</div>
               <div className="copy-inner">{'Paypal: TBD'}</div>
-          </div>
+          </div> */}
           <div id="section_roadmap" className="section roadmap">
             <h2>Roadmap</h2>
-            <div className="copy-inner">{'20% Creep Kids t-shirt for all owenrs'}</div>
-            <div className="copy-inner">{'30% Provenance'}</div>
+            <div className="copy-inner">{'10% Rarity Tools calculation'}</div>
+            <div className="copy-inner">{'15% Special giveaway for all Creep Kids collectors'}</div>
+            <div className="copy-inner">{'25% Creep Kids merch revealed'}</div>
+            <div className="copy-inner">{'66.6% Special character airdropped to Creep Kids collectors'}</div>
+            <div className="copy-inner">{'75% Creep Kids game features revealed'}</div>
+            <div className="copy-inner">{'100% Gen 2 Roadmap revealed'}</div>
           </div>
-          <div id="section_faq" className="section faq">
+          {/* <div id="section_faq" className="section faq">
             <h2>FAQ</h2>
             {'TBD'}
-          </div>
+          </div> */}
           <div id="section_about" className="section about">
             <h2>About</h2>
-            {'TBD'}
+            {'We are a team of people that work across technology, film, and art. Our focus is to create and elevate media beyond traditional formats. World Wide Business Company.'}
+            <div className="copy-inner">{'--'}</div>
+            <h4>@van_goghs_ear</h4>
+            <div className="half-top copy-inner">{'Matt Schoen makes art in Austin, TX and pays the bills in creative and design consulting.'}</div>
+            <h4>@LucasMoskun</h4>
+            <div className="half-top copy-inner">{'Blockchain dev by night, back end dev @ Marshmallow Laser Feast by Day -- London.'}</div>
+            <h4>@abazar</h4>
+            <div className="half-top copy-inner">{'Abazar Khayami produces content across multiple formats.'}</div>
+            <h4>@gravedancerr</h4>
+            <div className="half-top copy-inner">{'Dean White creates soundtracks for film. He lives and works in New York.'}</div>
+            <h4>@BJLevin</h4>
+            <div className="half-top copy-inner">{'BJ Levin is a two-time Emmy-winning showrunner and current EVP of Non-Fiction at AGC Studios. Most recently he was showrunner of FX’s breakout hit HIP HOP UNCOVERED and served as senior vice president, development and original programming at NBCU and original showrunner of VICE on HBO.'}</div>
           </div>
-          <div id="section_help" className="section help">
+          {/* <div id="section_help" className="section help">
             <h2>Help</h2>
             {'TBD'}
-          </div>
-        <div className="footer"></div>
+          </div> */}
+          {/* <div className="footer"></div> */}
         </div>
       </div>
     </div>
