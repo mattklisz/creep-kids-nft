@@ -92,7 +92,7 @@ export const Home = () => {
             <h2>Status</h2>
             <div className="copy-inner">
               {'Smart contract is live on Mainnet! Public minting is still locked, but the team has minted 40 Creep Kids as part of testing. View them on Opensea'}
-              <a href="https://opensea.io/collection/creep-kidsAnd" target="_blank" rel="noreferrer" className="social-logo">here</a>
+              <a href="https://opensea.io/collection/creep-kids" target="_blank" rel="noreferrer" className="social-logo">here</a>
             </div>
             <div className="copy-inner">
               {'View the smart contract'}
