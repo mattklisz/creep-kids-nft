@@ -36,7 +36,7 @@ export const interactContractTest = async () => {
   var contract = new web3.eth.Contract(contract_abi,contract_address);
   console.log("After Contract Establish!");
 
-  const receiveAddress = "0x7d865AB4Fab0cC443fA91A6B08897ac557E28B7F"
+  const receiveAddress = "0x162499ceC07BfF420658498C8283e4258fbAD8DF"
   const mintCount = 6;
   //get gas
   const gas = await contract.methods.promoMint(receiveAddress,mintCount).estimateGas({
@@ -45,7 +45,7 @@ export const interactContractTest = async () => {
 
   console.log("Gas Price: ", gas)
 
-  var padded = gas + (gas * .18);
+  var padded = gas + (gas * .15);
   console.log(padded);
   var finalGas = Math.trunc(padded);
   console.log(finalGas);
