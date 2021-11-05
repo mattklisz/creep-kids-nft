@@ -126,7 +126,7 @@ export const Home = () => {
             <div className="half-top copy-inner">{'Blockchain dev by night, back end dev @ Marshmallow Laser Feast by day -- London.'}</div>
             <h4>@abazar</h4>
             <div className="half-top copy-inner">{'Abazar Khayami produces content across multiple formats.'}</div>
-            <h4>@gravedancer</h4>
+            <h4>@gr4vedancer</h4>
             <div className="half-top copy-inner">{'Dean White creates soundtracks for film. He lives and works in New York.'}</div>
             <h4>@BJLevin</h4>
             <div className="half-top copy-inner">{'BJ Levin is a two-time Emmy-winning showrunner and current EVP of Non-Fiction at AGC Studios. Most recently he was showrunner of FX’s breakout hit HIP HOP UNCOVERED and served as senior vice president, development and original programming at NBCU and original showrunner of VICE on HBO.'}</div>
