@@ -8,6 +8,10 @@ import {
 } from '../../components'
 import './Home.css'
 
+const INSTAGRAM_URL = 'https://www.instagram.com/creepkids_nft'
+const DISCORD_URL = 'https://discord.gg/5xqEPmDU4X'
+const TWITTER_URL = 'https://twitter.com/creepkids'
+
 export const Home = () => {
   const [isConnected, setIsConnected] = useState(false)
   const [isConnecting, setIsConnecting] = useState(false)
@@ -32,9 +36,9 @@ export const Home = () => {
   return (
     <div>
       <div className={`header-${isMobile ? 'mobile' : 'desktop'}`}>
-        <a href="https://www.instagram.com/creepkids_nft" target="_blank" rel="noreferrer" className="social-logo">INSTAGRAM</a>
-        <a href="https://discord.gg/5xqEPmDU4X" target="_blank" rel="noreferrer" className="social-logo">DISCORD</a>
-        <a href="https://twitter.com/creepkids" target="_blank" rel="noreferrer" className="social-logo">TWITTER</a>
+        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="social-logo">INSTAGRAM</a>
+        <a href={DISCORD_URL} target="_blank" rel="noreferrer" className="social-logo">DISCORD</a>
+        <a href={TWITTER_URL} target="_blank" rel="noreferrer" className="social-logo">TWITTER</a>
       </div>
       <div className={`${isMobile ? '' : 'grid-container'}`}>
         <div className="home-container">
@@ -138,7 +142,7 @@ export const Home = () => {
           <div id="section_contact" className="footer">
             <h4>CONTACT US</h4>
             <div className="footer-items">
-              <a href="https://discord.gg/cKy3RRfz" target="_blank" rel="noreferrer" className="footer-item">DISCORD</a>
+              <a href={DISCORD_URL} target="_blank" rel="noreferrer" className="footer-item">DISCORD</a>
               <span className="footer-item">{' | '}</span>
               <div className="footer-item">admin@creepkids.io</div>
             </div>
