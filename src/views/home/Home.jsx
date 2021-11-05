@@ -123,7 +123,7 @@ export const Home = () => {
             <h4>@van_goghs_ear</h4>
             <div className="half-top copy-inner">{'Matt Schoen makes art in Austin, TX and pays the bills in creative and design consulting.'}</div>
             <h4>@LucasMoskun</h4>
-            <div className="half-top copy-inner">{'Blockchain dev by night, back end dev @ Marshmallow Laser Feast by Day -- London.'}</div>
+            <div className="half-top copy-inner">{'Blockchain dev by night, back end dev @ Marshmallow Laser Feast by day -- London.'}</div>
             <h4>@abazar</h4>
             <div className="half-top copy-inner">{'Abazar Khayami produces content across multiple formats.'}</div>
             <h4>@gravedancer</h4>
