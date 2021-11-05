@@ -33,7 +33,7 @@ export const Home = () => {
     <div>
       <div className={`header-${isMobile ? 'mobile' : 'desktop'}`}>
         <a href="https://www.instagram.com/creepkids_nft" target="_blank" rel="noreferrer" className="social-logo">INSTAGRAM</a>
-        <a href="https://discord.gg/cKy3RRfz" target="_blank" rel="noreferrer" className="social-logo">DISCORD</a>
+        <a href="https://discord.gg/5xqEPmDU4X" target="_blank" rel="noreferrer" className="social-logo">DISCORD</a>
         <a href="https://twitter.com/creepkids" target="_blank" rel="noreferrer" className="social-logo">TWITTER</a>
       </div>
       <div className={`${isMobile ? '' : 'grid-container'}`}>
