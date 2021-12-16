@@ -104,7 +104,7 @@ export const Home = () => {
             </div>
             <div className="copy-inner">
               {'And contract address: '}
-              <span className="copy-small">{'0x586fe06b3682e3ccf013846b4db093b75218526e'}</span>
+              <span className="copy-small">{'0x7ef232E01C45377b0321ff11cA50c59C5B69212b'}</span>
             </div>
           </div>
           <div id="section_roadmap" className="section roadmap">
