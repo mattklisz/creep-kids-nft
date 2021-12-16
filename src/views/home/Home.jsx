@@ -59,7 +59,7 @@ export const Home = () => {
               <img src={"./assets/images/mint.gif"} alt="" />
             </div>
             <div className="copy coming-soon">
-              {'- COMING SOON -'}
+              {'- DECEMBER 17 2021 -'}
             </div>
             {/* <div className="cost-label">
               {`${round(0.0666 * mintCount, 4)} ETH`}
