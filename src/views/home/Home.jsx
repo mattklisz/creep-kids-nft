@@ -116,8 +116,7 @@ export const Home = () => {
             <div className="copy-inner">{'10% Rarity Tools calculation'}</div>
             <div className="copy-inner">{'15% Special giveaway for all Creep Kids collectors'}</div>
             <div className="copy-inner">{'25% Creep Kids merch revealed'}</div>
-            <div className="copy-inner">{'50% CURSE OF THE SEAMONSTER'}</div>
-            <div className="copy-inner">{'66.6% Special character airdropped to Creep Kids collectors'}</div>
+            <div className="copy-inner">{'66.6% Special character released'}</div>
             <div className="copy-inner">{'75% Creep Kids game features revealed'}</div>
             <div className="copy-inner">{'100% Gen 2 Roadmap revealed'}</div>
           </div>
