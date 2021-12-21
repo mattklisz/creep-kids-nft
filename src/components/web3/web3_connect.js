@@ -21,6 +21,9 @@ function WEB3_CONNECT(setIsConnecting, setIsConnected){
     }
     else {
       setIsConnected(false);
+      setIsConnecting(false);
+
+      console.log("Wallet did not connect");
     }
   }
   ConnectWallet();
