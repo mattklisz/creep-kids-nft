@@ -61,6 +61,4 @@ export const interactContractTest = async () => {
       console.log("Error detetected");
     }
   });
-  
-  //console.log("mint tx: ", mintTx);
 }

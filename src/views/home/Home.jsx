@@ -7,6 +7,7 @@ import {
   Menu,
 } from '../../components'
 import './Home.css'
+import WEB3_CONNECT from '../../components/web3/web3_connect'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/creepkids_nft'
 const DISCORD_URL = 'https://discord.gg/5xqEPmDU4X'
@@ -21,9 +22,15 @@ export const Home = () => {
 
   const onConnectHandler = () => {
     console.log('hit connect')
-    setIsConnecting(true)
+    console.log("Is connecting", isConnecting);
+    console.log("Is connected", isConnected);
+    if(!isConnected && !isConnecting)
+    {
+      setIsConnecting(true)
+      // setIsConnected true/false depending on api response, then setIsConnecting(false)
+      WEB3_CONNECT(setIsConnecting, setIsConnected)
+    }
 
-    // setIsConnected true/false depending on api response, then setIsConnecting(false)
   }
 
   const onMintHandler = () => {
@@ -52,16 +59,16 @@ export const Home = () => {
             <img src={"./assets/images/nft_teaser.gif"} alt="" />
           </div>
           <div id="section_buy" className="section mint">
-            {/* <div className={`${isConnecting ? 'button-disabled ' : 'button-enabled '}${isConnected ? 'connected-button' : 'connect-button'}`} onClick={onConnectHandler}>
+             <div className={`${isConnecting ? 'button-disabled ' : 'button-enabled '}${isConnected ? 'connected-button' : 'connect-button'}`} onClick={onConnectHandler}>
               <img src={`${isConnected ? './assets/images/connected_wallet.gif' : './assets/images/connect_wallet.gif'}`} alt="" />
-            </div> */}
+            </div> 
             <div className={`${isMinting ? 'button-disabled ' : 'button-enabled '}mint-button`} onClick={onMintHandler}>
               <img src={"./assets/images/mint.gif"} alt="" />
             </div>
             <div className="copy coming-soon">
               {'- DECEMBER 22 2021 -'}
             </div>
-            {/* <div className="cost-label">
+            <div className="cost-label">
               {`${round(0.0666 * mintCount, 4)} ETH`}
             </div>
             <div className="mint-count-selector">
@@ -74,7 +81,7 @@ export const Home = () => {
               <div className={`${mintCount === 10 ? 'button-disabled ' : 'button-enabled '}mint-count-control`} onClick={() => setMintCount(mintCount + 1)}>
                 {'>'}
               </div>
-            </div> */}
+            </div> 
           </div>
           <div className="copy">
             {'Creep Kids are immortal souls minted in real time, programmatically on the Ethereum blockchain. There are 1000 unique possibilities, no two are alike. They are NFTs that can be traded on Opensea.'}
@@ -85,12 +92,10 @@ export const Home = () => {
           <div className="copy">
             {'When minted, each Creep Kid is assigned a unique set of RPG attributes.'}
           </div>
-          {/* <div id="section_how_to" className="section how-to">
+          <div id="section_how_to" className="section how-to">
             <h2>How To</h2>
-              <div className="copy-inner">{'Connect and pay through Metamask or PayPal'}</div>
-              <div className="copy-inner">{'Metamask: Install or send ETH to your Metamask wallet (purchasing ETH is easy through Coinbase or PayPal)'}</div>
-              <div className="copy-inner">{'Paypal: TBD'}</div>
-          </div> */}
+              <div className="copy-inner">{'Connect and pay through Metamask'}</div>
+          </div> 
           <Carousel />
           <div id="section_status" className="section status">
             <h2>Status</h2>
