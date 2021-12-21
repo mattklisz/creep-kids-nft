@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import {onboard, logAddress, interactContractTest} from './onboard'
 
 
-function WEB3_CONNECT(setIsConnecting, setIsConnected){ 
+export const WEB3_CONNECT = async(setIsConnecting, setIsConnected) => { 
   //setIsConnected(true)
 
   //connect wallet
@@ -31,4 +31,7 @@ function WEB3_CONNECT(setIsConnecting, setIsConnected){
   return(null);
 }
 
-export default WEB3_CONNECT;
+export const LogAddress = async () => {
+  await logAddress();
+}
+

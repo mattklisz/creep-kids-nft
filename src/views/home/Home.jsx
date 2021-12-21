@@ -7,7 +7,7 @@ import {
   Menu,
 } from '../../components'
 import './Home.css'
-import WEB3_CONNECT from '../../components/web3/web3_connect'
+import {WEB3_CONNECT} from '../../components/web3/web3_connect'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/creepkids_nft'
 const DISCORD_URL = 'https://discord.gg/5xqEPmDU4X'
