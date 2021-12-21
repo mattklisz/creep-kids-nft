@@ -38,6 +38,15 @@
   margin: 0 auto;
 }
 
+.copy-small {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.half-top {
+  margin-top: 0.5rem;
+}
+
 .header-desktop {
   padding: 1rem 0;
   text-align: right;
@@ -52,16 +61,64 @@
   padding: 0.5rem;
 }
 
+.connect-button {
+  height: 68px;
+  width: 351px;
+  margin: 0 auto 1rem auto;
+}
+
+.connected-button {
+  height: 62px;
+  width: 316px;
+  margin: 0 auto 2rem auto;
+}
+
 .mint-button {
   height: 68px;
   width: 159px;
   margin: 0 auto;
 }
 
-.coming-soon {
+.mint-count-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mint-count-control {
+  font-size: 1.5rem;
   font-weight: bold;
+  padding: 0 2rem;
+}
+
+.cost-label {
+  margin-top: 1rem;
 }
 
 .footer {
   padding: 2rem 0;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item {
+  padding: 0.5rem;
+}
+
+.button-enabled {
+  cursor: pointer;
+}
+
+.button-disabled {
+  cursor: default;
+  pointer-events: none;
+  color: grey;
+}
+
+.coming-soon {
+  font-weight: bold;
 }
