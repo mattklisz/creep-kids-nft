@@ -31,6 +31,11 @@ export const WEB3_CONNECT = async(setIsConnecting, setIsConnected) => {
   return(null);
 }
 
+export const InteractContractTest = async() =>
+{
+  await interactContractTest();
+}
+
 export const MintCreepKid = async(count, setIsMinting) => {
   const result = await mintCreepKid(count);
   setIsMinting(false)

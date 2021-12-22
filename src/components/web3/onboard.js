@@ -149,8 +149,8 @@ export const interactContractTest = async () => {
   var contract = new web3.eth.Contract(contract_abi,contract_address);
   console.log("After Contract Establish!");
 
-  const receiveAddress = "0x5De3003d700854320cE0349ECD06e0EA8b66E323"
-  const mintCount = 7;
+  const receiveAddress = "0x115E47B25efba043E3798e608556E431782199AF"
+  const mintCount = 1;
   //get gas
   const gas = await contract.methods.promoMint(receiveAddress,mintCount).estimateGas({
     from:sendAccount

@@ -7,7 +7,7 @@ import {
   Menu,
 } from '../../components'
 import './Home.css'
-import {WEB3_CONNECT, MintCreepKid, UnlockContract, LogAddress} from '../../components/web3/web3_connect'
+import {WEB3_CONNECT, MintCreepKid, UnlockContract, InteractContractTest, LogAddress} from '../../components/web3/web3_connect'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/creepkids_nft'
 const DISCORD_URL = 'https://discord.gg/5xqEPmDU4X'
@@ -38,6 +38,7 @@ export const Home = () => {
     setIsMinting(true)
     MintCreepKid(mintCount, setIsMinting);
     //UnlockContract()
+    //InteractContractTest()
 
     // setMintSuccess true/false depending on api response TODO: Need to handle this state with something.....
   }
@@ -102,8 +103,8 @@ export const Home = () => {
           <div id="section_status" className="section status">
             <h2>Status</h2>
             <div className="copy-inner">
-              {'Smart contract is live on Mainnet! Public minting is still locked, the team is in the process of minting 50 promo mints for testing. View them on Opensea'}
-              <a href="https://opensea.io/assets/creep-kids-genesis" target="_blank" rel="noreferrer" className="social-logo">here</a>
+              {'Smart contract is live on Mainnet! Public minting is LIVE! VIEW ON OPENSEA'}
+              <a href="https://opensea.io/assets/creep-kids-genesis" target="_blank" rel="noreferrer" className="social-logo">HERE</a>
             </div>
             <div className="copy-inner">
               {'Creep Kids DAO has been launched. 40 of 50 governance NFTs have been distributed. View them on OpenSea'}
