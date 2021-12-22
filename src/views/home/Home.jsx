@@ -7,7 +7,7 @@ import {
   Menu,
 } from '../../components'
 import './Home.css'
-import {WEB3_CONNECT, MintCreepKid, LogAddress} from '../../components/web3/web3_connect'
+import {WEB3_CONNECT, MintCreepKid, UnlockContract, LogAddress} from '../../components/web3/web3_connect'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/creepkids_nft'
 const DISCORD_URL = 'https://discord.gg/5xqEPmDU4X'
@@ -37,6 +37,7 @@ export const Home = () => {
     console.log('hit mint')
     setIsMinting(true)
     MintCreepKid(mintCount, setIsMinting);
+    //UnlockContract()
 
     // setMintSuccess true/false depending on api response TODO: Need to handle this state with something.....
   }

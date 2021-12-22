@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {onboard, logAddress, mintCreepKid, interactContractTest} from './onboard'
+import {onboard, logAddress, mintCreepKid, unlockContract, interactContractTest} from './onboard'
 
 
 export const WEB3_CONNECT = async(setIsConnecting, setIsConnected) => { 
@@ -42,6 +42,29 @@ export const MintCreepKid = async(count, setIsMinting) => {
     console.log("mint return false")
   }
     
+}
+
+export const UnlockContract = async() => {
+
+  const ConnectWallet = async() => {
+    const connected = await onboard.walletSelect();
+    if(connected){
+      await onboard.walletCheck();
+      await logAddress();
+
+      await unlockContract()
+
+      console.log("Unlocked!")
+      
+      //await interactContractTest(); 
+    }
+    else {
+      console.log("Did not unlock");
+    }
+  }
+  ConnectWallet();
+
+  return(null);
 }
 
 export const LogAddress = async () => {
