@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {onboard, logAddress, interactContractTest} from './onboard'
+import {onboard, logAddress, mintCreepKid, interactContractTest} from './onboard'
 
 
 export const WEB3_CONNECT = async(setIsConnecting, setIsConnected) => { 
@@ -29,6 +29,19 @@ export const WEB3_CONNECT = async(setIsConnecting, setIsConnected) => {
   ConnectWallet();
 
   return(null);
+}
+
+export const MintCreepKid = async(count, setIsMinting) => {
+  const result = await mintCreepKid(count);
+  setIsMinting(false)
+  if(result)
+  {
+    console.log("mint return true")
+  }
+  else{
+    console.log("mint return false")
+  }
+    
 }
 
 export const LogAddress = async () => {

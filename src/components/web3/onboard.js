@@ -11,6 +11,7 @@ let web3;
 //const contract_address = "0xC30136d8656bf263779f3f2eA6a644254435FDab";
 //const contract_address = "0x586fe06B3682e3cCF013846B4dB093b75218526E";
 const contract_address = "0x7ef232E01C45377b0321ff11cA50c59C5B69212b";
+
 export const onboard = Onboard({
   dappId: API_KEY,
   networkId: 1,
@@ -42,6 +43,25 @@ export const logAddress = async () => {
     console.log("Wallet not connected");
   }
 }
+
+export const mintCreepKid = async (count) => {
+  if(web3){
+    const isReady = await onboard.walletCheck();
+    if(isReady){
+      console.log("count: ", count)
+      return true;
+    }
+    else{
+      console.log("Wallet check failed");
+      return false;
+    }
+  }
+  else{
+    console.log("Provider not initialized")
+    return false
+  }
+}
+
 
 export const interactContractTest = async () => {
   var accounts = await web3.eth.getAccounts();
