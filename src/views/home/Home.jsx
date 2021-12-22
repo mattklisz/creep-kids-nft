@@ -7,7 +7,7 @@ import {
   Menu,
 } from '../../components'
 import './Home.css'
-import {WEB3_CONNECT} from '../../components/web3/web3_connect'
+import {WEB3_CONNECT, LogAddress} from '../../components/web3/web3_connect'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/creepkids_nft'
 const DISCORD_URL = 'https://discord.gg/5xqEPmDU4X'
@@ -17,7 +17,7 @@ export const Home = () => {
   const [isConnected, setIsConnected] = useState(false)
   const [isConnecting, setIsConnecting] = useState(false)
   const [mintCount, setMintCount] = useState(1)
-  const [isMinting, setIsMinting] = useState(true)
+  const [isMinting, setIsMinting] = useState(false)
   const [mintSuccess, setMintSuccess] = useState(false)
 
   const onConnectHandler = () => {
@@ -35,7 +35,8 @@ export const Home = () => {
 
   const onMintHandler = () => {
     console.log('hit mint')
-    setIsMinting(true)
+    //setIsMinting(true)
+    LogAddress();
 
     // setMintSuccess true/false depending on api response, then setIsMinting(false)
   }

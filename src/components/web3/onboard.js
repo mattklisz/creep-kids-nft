@@ -25,8 +25,22 @@ export const onboard = Onboard({
 });
 
 export const logAddress = async () => {
-  var accounts = await web3.eth.getAccounts();
-  console.log("Accounts: " + accounts);
+  //const check = onboard?.walletCheck();
+  if(web3)
+  {
+    const isReady = onboard.walletCheck();
+    if(isReady)
+    {
+      var accounts = await web3.eth.getAccounts();
+      console.log("Accounts: " + accounts);
+    }   
+    else {
+      console.log("Wallet Check Failed");
+    }
+  }   
+  else{
+    console.log("Wallet not connected");
+  }
 }
 
 export const interactContractTest = async () => {
