@@ -67,9 +67,9 @@ export const Home = () => {
             <div className={`${isMinting ? 'button-disabled ' : 'button-enabled '}mint-button`} onClick={onMintHandler}>
               <img src={"./assets/images/mint.gif"} alt="" />
             </div>
-            <div className="copy coming-soon">
+            {/*}<div className="copy coming-soon">
               {'- DECEMBER 22 2021 -'}
-            </div>
+            </div>*/}
             <div className="cost-label">
               {`${round(0.0666 * mintCount, 4)} ETH`}
             </div>
