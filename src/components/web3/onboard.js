@@ -144,12 +144,13 @@ export const unlockContract = async () => {
 export const interactContractTest = async () => {
   var accounts = await web3.eth.getAccounts();
   const sendAccount = accounts[0];
+  console.log("Promo mint")
   console.log("Send Account: ", sendAccount);
 
   var contract = new web3.eth.Contract(contract_abi,contract_address);
   console.log("After Contract Establish!");
 
-  const receiveAddress = "0x115E47B25efba043E3798e608556E431782199AF"
+  const receiveAddress = "0xae8B5ea052A78fF3A3e4fC5cE808F03E5442BF12"
   const mintCount = 1;
   //get gas
   const gas = await contract.methods.promoMint(receiveAddress,mintCount).estimateGas({

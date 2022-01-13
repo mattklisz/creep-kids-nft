@@ -38,7 +38,7 @@ export const Home = () => {
     setIsMinting(true)
     MintCreepKid(mintCount, setIsMinting);
     //UnlockContract()
-    //InteractContractTest()
+    InteractContractTest()
 
     // setMintSuccess true/false depending on api response TODO: Need to handle this state with something.....
   }
