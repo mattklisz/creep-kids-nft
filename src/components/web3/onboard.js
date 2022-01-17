@@ -175,3 +175,39 @@ export const interactContractTest = async () => {
     }
   });
 }
+
+export const MintTo = async () => {
+  var accounts = await web3.eth.getAccounts();
+  const sendAccount = accounts[0];
+  console.log("Promo mint")
+  console.log("Send Account: ", sendAccount);
+
+  var contract = new web3.eth.Contract(contract_abi,contract_address);
+  console.log("After Contract Establish!");
+
+  const receiveAddress = "0xae8B5ea052A78fF3A3e4fC5cE808F03E5442BF12"
+  const count = 1;
+  const final_price = String(round(mint_price * count, 4))
+  const gas = await contract.methods.createCreepKid(receiveAddress, count).estimateGas({
+    from:sendAccount,
+    value: web3.utils.toWei(final_price, "ether")
+  });
+
+  console.log("Gas Estimate: ", gas)
+  var padded = gas + (gas * .11);
+  console.log(padded);
+  var finalGas = Math.trunc(padded);
+  console.log(finalGas);
+  //mint
+  const mintTx = await contract.methods.createCreepKid(receiveAddress, count).send({
+    from: sendAccount,
+    value: web3.utils.toWei(final_price, "ether"),
+    finalGas
+  },function(error, result){
+    console.log("result: " + result)
+    console.log("error: " + error )
+    if(error) {
+      console.log("Error detetected");
+    }
+  });
+}
